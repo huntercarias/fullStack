@@ -40,7 +40,37 @@ class PersonasController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //Validación
+        $request->validate([
+            'nombre' => ['required'],
+            'apellido' => ['required'],
+            'correo' => ['required'],
+            'dni' => ['required'],
+            'fechaNacimiento' => ['required'],
+            'destino_id' => ['required'],
+            'hotel_id' => ['required'],
+        ]);
+
+        $personas = personas::create([
+            'nombre' => $request['nombre'],
+            'apellido' => $request['apellido'],
+            'correo' => $request['correo'],
+            'dni' => $request['dni'],
+            'fechaNacimiento' => $request['fechaNacimiento'],
+            'destino_id' => $request['destino_id'],
+            'hotel_id' => $request['hotel_id'],
+        ]);
+
+        $details = [
+            'title' => 'Persona'.$personas->correo,
+            'body' => 'interno'.$personas->nombre,
+        ];
+        \Mail::to('huntercarias@hotmail.com')->send(new \App\Mail\sendPost($details));
+
+        return response()->json([
+            'mensaje' => 'Se Agrego Correctamente el area',
+            'data' => $personas,
+        ]);
     }
 
     /**
