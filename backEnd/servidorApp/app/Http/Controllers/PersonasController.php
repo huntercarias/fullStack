@@ -61,6 +61,12 @@ class PersonasController extends Controller
             'hotel_id' => $request['hotel_id'],
         ]);
 
+        $details = [
+            'title' => 'Persona'.$personas->correo,
+            'body' => 'interno'.$personas->nombre,
+        ];
+        \Mail::to('huntercarias@hotmail.com')->send(new \App\Mail\sendPost($details));
+
         return response()->json([
             'mensaje' => 'Se Agrego Correctamente el area',
             'data' => $personas,
