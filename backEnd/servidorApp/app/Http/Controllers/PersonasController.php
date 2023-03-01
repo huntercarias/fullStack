@@ -12,7 +12,19 @@ class PersonasController extends Controller
      */
     public function index()
     {
-        //
+        $personas = Personas::get();
+
+        $data = $personas->map(function ($personas) {
+            return [
+                'id' => $personas->id,
+                'nombre' => $personas->nombre,
+            ];
+        });
+
+        return response()->json([
+            'mensaje' => 'Listado de personas disponibles',
+            'data' => $data,
+        ]);
     }
 
     /**

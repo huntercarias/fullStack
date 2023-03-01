@@ -12,7 +12,6 @@ class DestinosController extends Controller
      */
     public function index()
     {
-        //
     }
 
     /**
