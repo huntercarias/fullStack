@@ -1,4 +1,6 @@
 import './App.css';
+import Pika from './components/pika';
+
 
 function App() {
   return (
@@ -10,13 +12,8 @@ function App() {
         </p>
 
 
-        <form>
-          <label>
-            Name:
-            <input type="text" name="name" />
-          </label>
-          <input type="submit" value="Submit" />
-        </form>
+        <Pika />
+
 
       </header>
     </div>
