@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\PersonasController;
+use App\Http\Controllers\PersonasCorreoController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -24,3 +25,6 @@ Route::get('getAllPersonas', [PersonasController::class, 'index']);
 
 // Registra una persona
 Route::post('RegistraPersona', [PersonasController::class, 'store']);
+
+// Registra una persona
+Route::post('RegistraPersonaCorreo', [PersonasCorreoController::class, 'store']);

@@ -1,12 +1,31 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import axios from "axios";
-import React from "react";
 
-const baseURL = "https://jsonplaceholder.typicode.com/posts/1";
+
+const baseURL = "http://localhost/fullStack/backEnd/servidorApp/public/api/RegistraPersona";
 
 
 const pika = () => {
 
+    const [post, setPost] = React.useState({ nombre: null, apellido: null });
+
+    function createPost() {
+        axios
+            .post("http://localhost/fullStack/backEnd/servidorApp/public/api/RegistraPersona", {
+                nombre: "christofer joser",
+                apellido: "carias peña",
+                correo: "christofer@hotmail.com",
+                dni: "202020201",
+                fechaNacimiento: "1995-10-20",
+                destino_id: "1",
+                hotel_id: "1"
+            })
+            .then((response) => {
+                setPost(response.data);
+            });
+    }
+
+    if (!post) return "No post!"
 
     return (
         <form>
@@ -51,7 +70,11 @@ const pika = () => {
                     </input>
                 </div>
 
-
+                <div>
+                    <h1>{post.nombre}</h1>
+                    <p>{post.apellido}</p>
+                    <button onClick={createPost}>Create Post</button>
+                </div>
 
             </div>
         </form>
