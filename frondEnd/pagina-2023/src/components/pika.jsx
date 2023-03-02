@@ -8,14 +8,14 @@ const pika = () => {
         <form>
             <div class="row g-3 align-items-center">
                 <div class="mb-3">
-                    <label for="disabledTextInput" class="form-label">Nombre</label>
-                    <input type="text" id="Nombre" class="form-control" placeholder="Disabled input">
+                    <label for="disabledTextInput" class="form-label">Nombres</label>
+                    <input type="text" id="Nombres" class="form-control" placeholder="Disabled input">
                     </input>
                 </div>
 
                 <div class="mb-3">
-                    <label for="disabledTextInput" class="form-label">Nombre</label>
-                    <input type="text" id="Nombre" class="form-control" placeholder="Disabled input">
+                    <label for="disabledTextInput" class="form-label">Apellidos</label>
+                    <input type="text" id="Apellidos" class="form-control" placeholder="Disabled input">
                     </input>
                 </div>
 
