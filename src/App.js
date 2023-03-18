@@ -3,11 +3,13 @@ import './App.css';
 import axios from "axios";
 import React from "react";
 import { useForm } from "react-hook-form";
-import { edadValidator } from './components/validador';
-import encabezadomenus from './components/encabezadomenus';
+import { edadValidator } from './component/validador';
 
 
-const baseURL = "http://localhost/fullStack/backEnd/servidorApp/public/api/RegistraPersonaCorreo";
+
+
+
+const baseURL = "https://estetica-bs.com/servidorApp/public/api/RegistraPersonaCorreo";
 
 
 function App() {
@@ -18,32 +20,39 @@ function App() {
 
   const onSubmit = (data) => {
     console.log(data);
-    createPost(data.nombre, data.correo, data.telefono, data.mensaje);
+    //createPost(data.nombre, data.correo, data.telefono, data.mensaje);
+    createPostPrueba(data);
   }
 
-
-  function createPost(nombre, correo, telefono, mensaje) {
+  function createPostPrueba(data) {
     axios
-      .post(baseURL, {
-        nombre: nombre,
-        correo: correo,
-        telefono: telefono,
-        mensaje: mensaje,
-      })
+      .post(baseURL, data)
       .then((response) => {
+        alert(response.data);
         setPost(response.data);
       });
   }
 
+  // puedes  pasar dato por dato//
+  //  function createPost(nombre, correo, telefono, mensaje) {
+  //  axios
+  //      .post(baseURL, {
+  //        nombre: nombre,
+  //        correo: correo,
+  //        telefono: telefono,
+  //        mensaje: mensaje,
+  //      })
+  //      .then((response) => {
+  //        alert(response.data);
+  //        setPost(response.data);
+  //     });
+  //  }
+
+
   return (
+
     <div className="App">
       <header className="App-header">
-        <img src={"slider-1.png"} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-
-        </p>
-
 
 
         <form onSubmit={handleSubmit(onSubmit)} >
@@ -90,13 +99,18 @@ function App() {
           </div>
 
           <input type="submit" value="Enviar" />
+
+
         </form>
 
 
 
       </header>
     </div >
+
   );
 }
 
 export default App;
+
+
