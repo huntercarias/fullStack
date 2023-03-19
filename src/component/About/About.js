@@ -99,8 +99,6 @@ export const About = () => {
 
                 </form>
 
-
-
             </header>
         </div >
 
