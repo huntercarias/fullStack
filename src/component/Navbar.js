@@ -10,10 +10,11 @@ export const Navbar = () => {
                     className="navbar-brand"
                     to="/"
                 >
-                    Estetica Belle Siluet
+                   Inicio
                 </Link>
 
             </div>
+
 
 
             <div className="d-flex flex-row-reverse bd-highlight">
@@ -21,16 +22,27 @@ export const Navbar = () => {
 
                     <NavLink
                         className="nav-item nav-link"
-                        to="/Home"
+                        to="/Sliderconfondon"
+
+
                     >
-                        Home
+                        Conocenos
+                    </NavLink>
+
+
+
+                    <NavLink
+                        className="nav-item nav-link"
+                        to="/Acordeon"
+                    >
+                        Consejos
                     </NavLink>
 
                     <NavLink
                         className="nav-item nav-link"
-                        to="/consejos"
+                        to="/Informacion"
                     >
-                        Consejos
+                        Informacion sobre  nosotros
                     </NavLink>
 
                     <NavLink
