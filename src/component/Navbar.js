@@ -24,6 +24,7 @@ export const Navbar = () => {
                         className="nav-item nav-link"
                         to="/Sliderconfondon"
 
+
                     >
                         Conocenos
                     </NavLink>

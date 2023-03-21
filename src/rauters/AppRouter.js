@@ -22,6 +22,7 @@ export const AppRouter = () => {
             <Routes>
                 <Route exact path='/' element={<Home />} />
                 <Route exact path='/Contactanos' element={<About />} />
+
                 <Route exact path='/Acordeon' element={<Acordeon/>} />
                 <Route exact path='/Sliderconfondon' element={<Sliderconfondo/>} />
                 <Route exact path='/Informacion' element={<Informacion/>} />
