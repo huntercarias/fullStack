@@ -11,13 +11,15 @@ const AccordionSection = styled.div`
   justify-content: center;
   position: relative;
   height: 100vh;
-  background: #fff;
-`;
+
+  `;
 
 const Container = styled.div`
   position: absolute;
   top: 30%;
   box-shadow: 2px 10px 35px 1px rgba(153, 153, 153, 0.3);
+
+
 `;
 
 const Wrap = styled.div`
@@ -29,6 +31,7 @@ const Wrap = styled.div`
   width: 100%;
   text-align: center;
   cursor: pointer;
+  
 
   h1 {
     padding: 2rem;
@@ -57,12 +60,13 @@ const Dropdown = styled.div`
   }
 `;
 
-const Acordion = () => {
+const Acordeon = () => {
+  
     const [clicked, setClicked] = useState(false);
 
     const toggle = index => {
         if (clicked === index) {
-            //if clicked question is already active, then close it
+           
             return setClicked(null);
         }
 
@@ -71,11 +75,12 @@ const Acordion = () => {
 
     return (
         <IconContext.Provider value={{ color: '#00FFB9', size: '25px' }}>
-            <AccordionSection>
+            <AccordionSection >
                 <Container>
                     {Data.map((item, index) => {
                         return (
                             <>
+                         
                                 <Wrap onClick={() => toggle(index)} key={index}>
                                     <h1>{item.question}</h1>
                                     <span>{clicked === index ? <FiMinus /> : <FiPlus />}</span>
@@ -85,6 +90,7 @@ const Acordion = () => {
                                         <p>{item.answer}</p>
                                     </Dropdown>
                                 ) : null}
+                                
                             </>
                         );
                     })}
@@ -94,4 +100,4 @@ const Acordion = () => {
     );
 };
 
-export default Acordion;
+export default Acordeon;
