@@ -28,33 +28,17 @@ export const Navbar = () => {
 
                     <NavLink
                         className="nav-item nav-link"
-                        to="/About"
+                        to="/Consejos"
                     >
-                        About
+                        Consejos
                     </NavLink>
                     <NavLink
                         className="nav-item nav-link"
-                        to="/Products"
+                        to="/Contactanos"
                     >
-                        Products
-                    </NavLink>
-
-                    <NavLink
-                        className="nav-item nav-link"
-                        to="/Services"
-                    >
-                        Services
-                    </NavLink>
-                    <NavLink
-                        className="nav-item nav-link"
-                        to="/Contact"
-                    >
-                        Contact
+                        Contactanos
                     </NavLink>
                 </div>
-
-
-
             </div>
         </nav>
     )
