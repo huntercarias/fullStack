@@ -1,7 +1,7 @@
 
 const imagenes = ({ images }) => {
     return (
-        <section className='slider'>
+        <section >
             <h1 className='slider__title'>Estetica Belle Siluet</h1>
             {images.map((image) => (
                 <div key={image.id} className='slider__content--item'>
