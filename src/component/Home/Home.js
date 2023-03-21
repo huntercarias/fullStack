@@ -1,24 +1,48 @@
-import React from 'react'
-import Carrucel from '../Acordeon/Carrucel'
-import Acordion from '../Acordeon/Acordeon'
-export const Home = () => {
-    return (
-        <div>
-            <Carrucel />
-            <Acordion />
-            <div>
-                <p>
-                    Es un hecho establecido hace demasiado tiempo que un lector
-                    se distraerá con el contenido del texto de un sitio mientras
-                    que mira su diseño. El punto de usar Lorem Ipsum es que tiene
-                    una distribución más o menos normal de las letras, al contrario
-                    de usar textos como por ejemplo "Contenido aquí, contenido aquí".
-                    Estos textos hacen parecerlo un español que se puede leer. Muchos
-                    paquetes de autoedición y editores de páginas web usan el Lorem Ipsum
-                    como su texto por defecto, y al hacer una búsqueda
-                </p>
-            </div>
-        </div>
+import '../../App.css'
 
+import image1 from '../../imagenes/first.jpg';
+import image3 from '../../imagenes/third.jpg';
+import image4 from '../../imagenes/masaje-pareja.jpg';
+import image5 from '../../imagenes/tratamiento abdomen.jpg';
+import image6 from '../../imagenes/MasajeRelajante.jpg';
+
+
+// components
+import Slider from '../Carousel/Carousel'
+
+export const Home = () => {
+
+    const images = [
+        {
+            id: '1',
+            title: 'Faciales',
+            image: image1,
+        },
+        {
+            id: '2',
+            title: 'Tratamientos Capilares',
+            image: image3,
+        },
+        {
+            id: '3',
+            title: 'Relajación en Pareja',
+            image: image4,
+        },
+        {
+            id: '4',
+            title: 'Tratamiento de Radiofrecuencia',
+            image: image5,
+        },
+        {
+            id: '5',
+            title: 'Relajación',
+            image: image6,
+        },
+    ]
+
+    return (
+        <div className='App'>
+            <Slider images={images} />
+        </div>
     )
 }
