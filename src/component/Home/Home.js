@@ -9,6 +9,7 @@ import image6 from '../../imagenes/MasajeRelajante.jpg';
 
 // components
 import Slider from '../Carousel/Carousel'
+import { Container } from 'react-bootstrap';
 
 export const Home = () => {
 
@@ -41,8 +42,12 @@ export const Home = () => {
     ]
 
     return (
-        <div className='App'>
-            <Slider images={images} />
-        </div>
+        <div >
+            <Container>
+                <div className='App'>
+                    <Slider images={images} />
+                </div>
+            </Container>
+        </div >
     )
 }

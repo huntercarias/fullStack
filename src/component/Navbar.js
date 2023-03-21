@@ -28,10 +28,11 @@ export const Navbar = () => {
 
                     <NavLink
                         className="nav-item nav-link"
-                        to="/Consejos"
+                        to="/consejos"
                     >
                         Consejos
                     </NavLink>
+
                     <NavLink
                         className="nav-item nav-link"
                         to="/Contactanos"

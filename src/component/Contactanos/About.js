@@ -5,12 +5,40 @@ import axios from "axios";
 import React from "react";
 import { useForm } from "react-hook-form";
 import { edadValidator } from '../validador';
+import { imagenes } from '../Contactanos/imagen';
+
+
+import image5 from '../../imagenes/tratamiento abdomen.jpg';
+import image6 from '../../imagenes/MasajeRelajante.jpg';
+
+// components
+
+
+
+
 
 
 const baseURL = "https://estetica-bs.com/servidorApp/public/api/RegistraPersonaCorreo";
 
 export const About = () => {
     const [post, setPost] = React.useState(null);
+
+
+    const images = [
+        {
+            id: '4',
+            title: 'Tratamiento de Radiofrecuencia',
+            image: image5,
+        },
+        {
+            id: '5',
+            title: 'Relajación',
+            image: image6,
+        },
+    ]
+
+
+
 
     const { register, formState: { errors }, handleSubmit } = useForm();
 
@@ -100,7 +128,8 @@ export const About = () => {
                 </form>
 
             </header>
-        </div >
+            <imagenes images={images} />
 
+        </div >
     );
 }
