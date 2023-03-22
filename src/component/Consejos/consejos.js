@@ -8,18 +8,19 @@ export const Consejos = () => {
         <Container>
 
 
-            <div class="container text-center">
-                <div class="row">
-                    <div class="col">
-                        <div><Acordeon /></div>
-                    </div>
-                    <div class="col">
-                        <div>
-                            <img src={image1} class="card-img-top" />
-                        </div>
-
-                    </div>
+            <div class="row text-center">
+                <div class="col-lg-2 col-md-3 col-sm-6 col-xs-12"> </div>
+                <div class="col-lg-4 col-md-3 col-sm-6 col-xs-12">
+                    <div><Acordeon /></div>
                 </div>
+
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+
+                    <img src={image1} class="w-100 p-6 float-end" />
+
+
+                </div>
+
             </div>
 
 
