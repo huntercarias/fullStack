@@ -1,5 +1,8 @@
 **********************link de pagina web ****************************
+**************Frond End***************************************
 https://www.estetica-bs.com/
+**************Back End****************************************
+https://estetica-bs.com/servidorApp/public/api/RegistraPersonaCorreo?nombre=cristofer&correo=cristofer@hotmail.com&telefono=30303030&mensaje=hola a todos como estan
 *********************************************************************
 *********************************************************************
 --Comando para construir un proyecto nuevo de REACT
