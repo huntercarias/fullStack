@@ -60,44 +60,46 @@ const Dropdown = styled.div`
   }
 `;
 
-const Acordeon = () => {
-  
-    const [clicked, setClicked] = useState(false);
 
-    const toggle = index => {
-        if (clicked === index) {
-           
-            return setClicked(null);
-        }
 
-        setClicked(index);
-    };
 
-    return (
-        <IconContext.Provider value={{ color: '#00FFB9', size: '25px' }}>
-            <AccordionSection >
-                <Container>
-                    {Data.map((item, index) => {
-                        return (
-                            <>
-                         
-                                <Wrap onClick={() => toggle(index)} key={index}>
-                                    <h1>{item.question}</h1>
-                                    <span>{clicked === index ? <FiMinus /> : <FiPlus />}</span>
-                                </Wrap>
-                                {clicked === index ? (
-                                    <Dropdown>
-                                        <p>{item.answer}</p>
-                                    </Dropdown>
-                                ) : null}
-                                
-                            </>
-                        );
-                    })}
-                </Container>
-            </AccordionSection>
-        </IconContext.Provider>
-    );
-};
+export const Acordeon = () => {
 
-export default Acordeon;
+  const [clicked, setClicked] = useState(false);
+
+  const toggle = index => {
+    if (clicked === index) {
+
+      return setClicked(null);
+    }
+
+    setClicked(index);
+  };
+
+
+  return (
+    <IconContext.Provider value={{ color: '#00FFB9', size: '25px' }}>
+      <AccordionSection >
+        <Container>
+          {Data.map((item, index) => {
+            return (
+              <>
+
+                <Wrap onClick={() => toggle(index)} key={index}>
+                  <h1>{item.question}</h1>
+                  <span>{clicked === index ? <FiMinus /> : <FiPlus />}</span>
+                </Wrap>
+                {clicked === index ? (
+                  <Dropdown>
+                    <p>{item.answer}</p>
+                  </Dropdown>
+                ) : null}
+
+              </>
+            );
+          })}
+        </Container>
+      </AccordionSection>
+    </IconContext.Provider>
+  )
+}
