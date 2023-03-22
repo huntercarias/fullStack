@@ -10,7 +10,7 @@ export const Navbar = () => {
                     className="navbar-brand"
                     to="/"
                 >
-                   Inicio
+                    Estetica BS
                 </Link>
 
             </div>
@@ -33,7 +33,7 @@ export const Navbar = () => {
 
                     <NavLink
                         className="nav-item nav-link"
-                        to="/Acordeon"
+                        to="/Consejos"
                     >
                         Consejos
                     </NavLink>

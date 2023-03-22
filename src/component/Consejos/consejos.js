@@ -1,26 +1,28 @@
-import React from 'react'
-import Carrucel from '../Acordeon/Carrucel'
-import Acordion from '../Acordeon/Acordeon'
+import { Container } from 'react-bootstrap';
+import { Acordeon } from '../Acordeon/Acordeon';
+import image1 from '../../imagenes/chica.jpg';
 
 
-export const consejos = () => {
+export const Consejos = () => {
     return (
-        <div>
-            <Carrucel />
-            <Acordion />
-            <div>
-                <p>
-                    Es un hecho establecido hace demasiado tiempo que un lector
-                    se distraerá con el contenido del texto de un sitio mientras
-                    que mira su diseño. El punto de usar Lorem Ipsum es que tiene
-                    una distribución más o menos normal de las letras, al contrario
-                    de usar textos como por ejemplo "Contenido aquí, contenido aquí".
-                    Estos textos hacen parecerlo un español que se puede leer. Muchos
-                    paquetes de autoedición y editores de páginas web usan el Lorem Ipsum
-                    como su texto por defecto, y al hacer una búsqueda
-                </p>
-            </div>
-        </div>
+        <Container>
 
+
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col">
+                        <div><Acordeon /></div>
+                    </div>
+                    <div class="col">
+                        <div>
+                            <img src={image1} class="card-img-top" />
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </Container>
     )
 }
